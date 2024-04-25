@@ -10,6 +10,8 @@ from streamlit_folium import folium_static
 import folium
 import streamlit as st
 
+max_income = 60000
+
 @st.cache(hash_funcs={folium.folium.Map: lambda _: None}, allow_output_mutation=True)
 def make_map(df, diff_steps, display_all=True):
 	if display_all:
